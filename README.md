@@ -1,126 +1,128 @@
 
 ---
 
-# 🎧 AudioBook - PDF to Speech Converter
+# 🎧 AudioBook Reader (Windows) - PDF to Speech Converter
 
+![Windows](https://img.shields.io/badge/Platform-Windows-blue)
 ![Python](https://img.shields.io/badge/Python-3.6%2B-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Working%20Perfectly-brightgreen)
 
-> **Transform your PDFs into audiobooks!**
-> Effortlessly convert any PDF into clear, natural-sounding speech — page by page.
+> Easily convert any PDF into an audiobook!
+> A Windows-only Python app that extracts text from PDFs and reads it aloud using Windows native Text-to-Speech.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-* 📂 **Easy PDF selection** with a friendly file dialog
-* 📝 **Page-by-page text extraction** using `PyPDF2`
-* 🔊 **Offline Text-to-Speech** powered by `pyttsx3`
-* ⏯️ **Pause and control** reading after each page
-* ⚡ **Lightweight & efficient** — no internet needed
+* 🗂️ Select any PDF via an intuitive GUI file dialog
+* 📄 Extracts and cleans text from each PDF page for clarity
+* 🔊 Speaks text aloud using Windows SAPI.SpVoice COM interface (high quality, native speech)
+* ⏯️ User-controlled flow: decide whether to continue after each page
+* ✅ Simple, lightweight, and fast
 
 ---
 
 ## 🧰 Prerequisites
 
-* Python 3.6 or above
-* Libraries:
+* **Windows OS** (uses Windows SAPI, so not cross-platform)
+* Python 3.6+
+* Python packages:
 
-  * `pyttsx3`
-  * `PyPDF2`
-  * `tkinter` (usually pre-installed)
-
----
-
-## 🚀 Installation
-
-**Step 1: Clone or Download**
-
-```bash
-git clone https://github.com/yourusername/AudioBook.git
-cd AudioBook
-```
-
-**Step 2: Create a virtual environment (recommended)**
-
-* Windows:
-  `python -m venv .venv`
-  `.venv\Scripts\activate`
-
-* macOS/Linux:
-  `python3 -m venv .venv`
-  `source .venv/bin/activate`
-
-**Step 3: Install dependencies**
-
-```bash
-pip install pyttsx3 PyPDF2
-```
+  * `pywin32` (`pip install pywin32`)
+  * `PyPDF2` (`pip install PyPDF2`)
+* `tkinter` (usually comes with Python)
 
 ---
 
-## 🎯 How to Use
+## 🎯 Installation & Setup
 
-Run the app:
+1. **Clone or download** this repository.
 
-```bash
-python main.py
-```
+2. (Recommended) Create a virtual environment:
 
-1. Select your PDF in the dialog that appears
-2. Listen as each page is read aloud
-3. After each page, choose to continue or stop
+   * Windows:
+
+     ```
+     python -m venv .venv
+     .venv\Scripts\activate
+     ```
+
+3. **Install dependencies:**
+
+   ```
+   pip install pywin32 PyPDF2
+   ```
+
+---
+
+## ▶️ How to Use
+
+1. Run the program:
+
+   ```
+   python audiobook_reader.py
+   ```
+2. A file dialog will open — select your PDF file.
+3. The app will read aloud the text from each page.
+4. After each page, you’ll be prompted to continue or stop:
+
+   ```
+   Continue reading? (y/n):
+   ```
+5. Enjoy your audiobook experience!
 
 ---
 
 ## 🛠️ How It Works
 
-* Uses `tkinter` for file selection
-* Extracts text with `PyPDF2`
-* Reads aloud with `pyttsx3`
-* User controls flow via prompts after each page
+* Opens a file picker via `tkinter` for easy PDF selection
+* Reads text from each page using `PyPDF2`
+* Cleans extracted text for smoother speech
+* Speaks text aloud using Windows SAPI.SpVoice via `pywin32` COM
+* Prompts user to continue after each page
 
 ---
 
-## ❗ Troubleshooting
+## ❗ Troubleshooting & Tips
 
-* **tkinter missing?**
-  Linux users:
-  `sudo apt-get install python3-tk`
+* Make sure you run this on **Windows** — the speech engine is Windows-specific.
+* If you get an error importing `win32com.client`, run:
 
-* **No sound?**
-  Verify your audio system and that `pyttsx3` installed correctly.
+  ```
+  pip install pywin32
+  ```
+* For missing `tkinter`, install via your Python distribution or system package manager.
+* Ensure your speakers/headphones are working and volume is up!
 
 ---
 
 ## 🤝 Contributing
 
-Open to contributions! Fork, improve, and submit PRs. Issues and feature requests welcome.
+Feel free to open issues, suggest features, or submit pull requests. Your contributions are welcome!
 
 ---
 
 ## 📜 License
 
-MIT License. See the LICENSE file.
+This project is licensed under the **MIT License**. See the LICENSE file for details.
 
 ---
 
 ## 🙋‍♀️ About Me
 
-**Monika Bhardwaj** – passionate Python dev & audiobook enthusiast.
+**Your Name** — passionate Python developer and audiobook lover.
 
 ---
 
 ## ❤️ Acknowledgements
 
-* [pyttsx3](https://github.com/nateshmbhat/pyttsx3)
-* [PyPDF2](https://github.com/py-pdf/PyPDF2)
-* Python’s built-in `tkinter`
+* Windows Text-to-Speech engine via [pywin32](https://github.com/mhammond/pywin32)
+* PDF parsing thanks to [PyPDF2](https://github.com/py-pdf/PyPDF2)
+* GUI file dialogs with Python’s built-in `tkinter`
 
 ---
 
-**Enjoy your listening experience! 🎉**
+**Enjoy listening and happy coding! 🎉**
 
 ---
 
