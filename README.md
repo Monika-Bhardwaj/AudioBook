@@ -1,92 +1,124 @@
-AudioBook - PDF to Speech Converter
+🎧 AudioBook - PDF to Speech Converter
 
-A Python application that converts PDF documents into audiobooks by reading each page aloud using text-to-speech.
+Convert your PDFs into audiobooks effortlessly! This Python app reads each page aloud, turning your documents into listening experiences.
 
-Features
 
-Select a PDF file through a user-friendly file dialog.
+✨ Features
 
-Extract text from every page of the PDF.
+📂 Easy file selection: Choose any PDF via a graphical file dialog
 
-Use offline text-to-speech synthesis to read the text aloud.
+📄 Page-by-page reading: Extracts and reads text from every PDF page
 
-Prompt user after each page to continue or stop.
+🗣️ Offline Text-to-Speech: Uses pyttsx3 for smooth, offline speech synthesis
 
-Lightweight and easy to use.
+⏸️ Control flow: Pause after each page and decide whether to continue or stop
 
-Prerequisites
+⚡ Lightweight & fast: No heavy dependencies, runs smoothly on most systems
 
-Python 3.6 or higher
 
-Python libraries:
+🛠️ Prerequisites
 
-pyttsx3 (Text-to-speech engine)
+Python 3.6+
+
+
+Libraries:
+
+pyttsx3 (text-to-speech engine)
 
 PyPDF2 (PDF text extraction)
 
-tkinter (File dialog; usually pre-installed with Python)
+tkinter (GUI file dialog, usually included with Python)
 
-Installation
 
-Clone this repository or download the source files.
+🚀 Installation Steps
 
-(Optional) Create and activate a virtual environment:
+Clone or download this repository to your local machine.
 
-On Windows:
+
+(Optional but recommended) Create a virtual environment to keep dependencies clean:
+
+Windows:
+
 python -m venv .venv
 .venv\Scripts\activate
 
-On macOS/Linux:
+
+macOS/Linux:
+
 python3 -m venv .venv
 source .venv/bin/activate
 
-Install required packages with:
+
+Install required packages:
+
 pip install pyttsx3 PyPDF2
 
-Usage
 
-Run the main Python script by executing:
+▶️ How to Use
+
+Run the program:
+
 python main.py
 
-A file dialog will open to select your PDF file.
 
-The program will read the text of each page aloud.
+A file dialog will appear. Select the PDF you want to convert.
 
-After each page, you will be prompted to continue reading or stop.
+The app will read the text aloud page by page.
 
-How It Works
+After each page, you will be asked:
 
-Uses tkinter to open a file selection dialog.
+Continue reading? (y/n):
 
-Reads PDF pages using PyPDF2.
+Type y to go on, or n to stop listening.
 
-Extracted text is passed to pyttsx3 for speech synthesis.
 
-Provides user control to continue or stop after each page.
+💡 How It Works
 
-Troubleshooting
+Opens a GUI file selector using tkinter.
 
-If you get errors related to tkinter, install it manually (for example, on Ubuntu/Debian):
+Uses PyPDF2 to extract text from each PDF page.
+
+Speaks the extracted text aloud using pyttsx3.
+
+Waits for user input after each page to continue or stop.
+
+
+🐞 Troubleshooting Tips
+
+tkinter errors?
+On Linux systems, you might need to install it manually:
+
 sudo apt-get install python3-tk
 
-If speech does not work, ensure your system audio is enabled and pyttsx3 dependencies are installed properly.
 
-Contributing
+No speech or sound issues?
 
-Contributions, issues, and feature requests are welcome! Feel free to fork the repository and submit pull requests.
+Check your audio system is working.
 
-License
+Make sure pyttsx3 installed correctly with all dependencies.
+
+
+🤝 Contributing
+
+Contributions are warmly welcomed! Fork the repo, make your changes, and open a pull request. Suggestions and bug reports are appreciated!
+
+
+📄 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Author
+
+🙋‍♀️ Author
 
 Monika Bhardwaj
 
-Acknowledgements
 
-pyttsx3 for the text-to-speech engine.
+❤️ Acknowledgements
 
-PyPDF2 for PDF parsing.
+pyttsx3
+ for the text-to-speech engine
 
-Python’s tkinter library for file dialogs.
+PyPDF2
+ for PDF handling
+
+Python’s built-in tkinter for GUI dialogs
