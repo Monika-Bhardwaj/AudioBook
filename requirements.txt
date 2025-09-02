@@ -1,0 +1,13 @@
+# --- Required Python Packages for AudioBook Reader ---
+
+# PyPDF2 is used for reading and extracting text from PDF files
+PyPDF2>=3.0.1
+
+# pywin32 provides access to Windows COM interfaces
+# It's used here to access the native Windows Text-to-Speech (SAPI) engine
+pywin32>=306
+
+# (Optional) If you're using Tkinter's file dialog to select the PDF,
+# Tkinter is part of the standard library, so no need to install it separately
+
+# --- End of Requirements ---
